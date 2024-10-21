@@ -10,6 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-wrap: pretty;
 }
 
 .Cabecera {
@@ -22,6 +23,14 @@
   padding: 1rem;
   text-align: center;
   color: var(--color-2);
+  transition: all 0.4s;
+  text-shadow: 0 0 0 var(--color-4);
+}
+
+.Cabecera__Titulo:hover {
+  color: var(--color-4);
+  transition: all 0.4s;
+  text-shadow: 0 0 0.5em var(--color-4);
 }
 
 .ImagenResponsiva {
@@ -52,12 +61,6 @@
   font-weight: 500;
 }
 
-@media screen and (max-width: 768px) {
-  .LugarPrincipal {
-    grid-template-columns: 1fr;
-  }
-}
-
 .GaleriaGatitos {
   place-items: center;
   justify-items: center;
@@ -73,6 +76,15 @@
   overflow: hidden;
   background-color: #68767a;
   padding: 1em;
+  transition: all 0.4s;
+  transform: scale(1);
+}
+.GaleriaGatitos__Tarjeta:hover {
+  transform: scale(1.05);
+  transition: all 0.4s;
+  box-shadow: 0 1em 1.5em rgba(0, 0, 0, 0.5);
+  background-color: #596366;
+  cursor: pointer;
 }
 
 .GaleriaGatitos__Imagen {
@@ -123,4 +135,17 @@
   padding: 1rem;
   text-align: center;
   color: var(--color-2);
+}
+
+@media screen and (max-width: 768px) {
+  .LugarPrincipal {
+    grid-template-columns: 1fr;
+  }
+
+  .LugarFinal {
+    grid-template-columns: 1fr;
+  }
+  .GaleriaGatitos {
+    grid-template-columns: 1fr 1fr;
+  }
 }
