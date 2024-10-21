@@ -1,0 +1,126 @@
+:root {
+  --color-1: #6bbacf;
+  --color-2: #719aa5;
+  --color-3: #57d7fa;
+  --color-4: #68767a;
+  --color-5: #3f4c50;
+  --color-6: #1f2f33;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Cabecera {
+  background-color: var(--color-6);
+  box-shadow: 0 2em 4em rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+.Cabecera__Titulo {
+  font-size: 2em;
+  padding: 1rem;
+  text-align: center;
+  color: var(--color-2);
+}
+
+.ImagenResponsiva {
+  width: 100%;
+  height: auto;
+  border-radius: 0.4em;
+}
+
+.LugarPrincipal {
+  display: grid;
+  background-color: var(--color-1);
+  padding: 1rem;
+  grid-template-columns: 1fr 2fr;
+  place-content: center;
+  gap: 1rem;
+}
+
+.LugarPrincipal__Imagen {
+  display: grid;
+  place-content: center;
+}
+
+.LugarPrincipal__Texto {
+  display: grid;
+  place-content: center;
+  color: var(--color-5);
+  text-align: center;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .LugarPrincipal {
+    grid-template-columns: 1fr;
+  }
+}
+
+.GaleriaGatitos {
+  place-items: center;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  place-content: center;
+}
+
+.GaleriaGatitos__Tarjeta {
+  border-radius: 0.4em;
+  overflow: hidden;
+  background-color: #68767a;
+  padding: 1em;
+}
+
+.GaleriaGatitos__Imagen {
+  aspect-ratio: 1/1;
+}
+
+.GaleriaGatitos__ContenedorTexto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.GaleriaGatitos__Texto--Titulo {
+  color: var(--color-3);
+  font-weight: 600;
+  font-size: 1.2em;
+}
+.GaleriaGatitos__Texto {
+  color: azure;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.LugarFinal {
+  display: grid;
+  background-color: var(--color-6);
+  padding: 1rem;
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+  gap: 1rem;
+}
+
+.LugarFinal__Imagen {
+  display: grid;
+  place-content: center;
+}
+
+.LugarFinal__Texto {
+  display: grid;
+  place-content: center;
+  color: azure;
+  text-align: center;
+  font-weight: 500;
+}
+
+.PieDePagina {
+  background-color: var(--color-6);
+  padding: 1rem;
+  text-align: center;
+  color: var(--color-2);
+}
